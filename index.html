@@ -3,8 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>ÉLORA | Ladies Watches Pakistan</title>
+<title>ÉLORA | Ladies Watches</title>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@400;500;600;700&display=swap');
@@ -13,42 +12,33 @@
 html{scroll-behavior:smooth}
 body{
   font-family:Montserrat,sans-serif;
-  background:#faf8f4;
+  background:#faf7f2;
   color:#171513;
 }
+button,input{font-family:inherit}
 a{text-decoration:none;color:inherit}
-button{font-family:inherit;cursor:pointer}
 
 :root{
+  --gold:#b08a45;
   --dark:#171513;
-  --cream:#faf8f4;
-  --soft:#eee8df;
-  --gold:#b08a50;
-  --muted:#756f67;
+  --cream:#faf7f2;
   --white:#fff;
-}
-
-.topbar{
-  background:var(--dark);
-  color:#fff;
-  text-align:center;
-  padding:9px;
-  font-size:11px;
-  letter-spacing:1.5px;
+  --border:#e8dfd2;
 }
 
 header{
-  background:rgba(250,248,244,.96);
   position:sticky;
   top:0;
   z-index:1000;
-  border-bottom:1px solid #e6e0d8;
+  background:rgba(250,247,242,.96);
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid var(--border);
 }
 
 .nav{
-  max-width:1250px;
+  max-width:1200px;
   margin:auto;
-  height:82px;
+  height:78px;
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -58,386 +48,412 @@ header{
 .logo{
   font-family:"DM Serif Display",serif;
   font-size:32px;
-  letter-spacing:4px;
+  letter-spacing:3px;
 }
 
 .logo span{color:var(--gold)}
 
-nav{
+.navlinks{
   display:flex;
-  gap:32px;
+  gap:28px;
+  align-items:center;
 }
 
-nav a{
-  font-size:12px;
+.navlinks a{
+  font-size:13px;
   font-weight:600;
-  letter-spacing:1px;
-  text-transform:uppercase;
+  letter-spacing:.8px;
 }
 
-nav a:hover{color:var(--gold)}
+.navlinks a:hover{color:var(--gold)}
 
 .nav-actions{
   display:flex;
-  gap:12px;
+  gap:10px;
 }
 
 .icon-btn{
-  border:1px solid #ddd5ca;
-  background:transparent;
   width:42px;
   height:42px;
+  border:1px solid var(--border);
+  background:white;
   border-radius:50%;
-  font-size:17px;
+  cursor:pointer;
+  font-size:18px;
+  transition:.25s;
+}
+
+.icon-btn:hover{
+  background:var(--dark);
+  color:white;
+}
+
+.menu{
+  display:none;
 }
 
 .hero{
   min-height:650px;
   display:grid;
-  grid-template-columns:1.05fr .95fr;
-  background:#eee8df;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  max-width:1200px;
+  margin:auto;
+  padding:70px 25px;
+  gap:50px;
 }
 
-.hero-text{
-  display:flex;
-  justify-content:center;
-  flex-direction:column;
-  padding:80px 9%;
-}
-
-.eyebrow{
-  font-size:11px;
+.hero-text small{
   letter-spacing:4px;
-  text-transform:uppercase;
   color:var(--gold);
   font-weight:700;
-  margin-bottom:20px;
 }
 
 .hero h1{
   font-family:"DM Serif Display",serif;
-  font-size:clamp(55px,7vw,92px);
-  line-height:.95;
-  font-weight:400;
+  font-size:72px;
+  line-height:1;
+  margin:18px 0;
 }
 
-.hero h1 em{
-  color:var(--gold);
-  font-style:normal;
-}
+.hero h1 span{color:var(--gold)}
 
 .hero p{
   max-width:500px;
-  color:var(--muted);
+  color:#6e675e;
   line-height:1.8;
-  margin:28px 0;
-  font-size:14px;
+  font-size:15px;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:14px;
+  margin-top:30px;
 }
 
 .btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  background:var(--dark);
-  color:#fff;
-  padding:16px 28px;
   border:none;
-  font-size:11px;
+  padding:15px 25px;
+  cursor:pointer;
   font-weight:700;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  transition:.3s;
+  border-radius:4px;
+  transition:.25s;
 }
 
-.btn:hover{
+.btn-dark{
+  background:var(--dark);
+  color:white;
+}
+
+.btn-dark:hover{
   background:var(--gold);
-  transform:translateY(-2px);
+}
+
+.btn-light{
+  background:white;
+  border:1px solid var(--border);
+}
+
+.btn-light:hover{
+  border-color:var(--gold);
 }
 
 .hero-watch{
-  min-height:650px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:
-    radial-gradient(circle at center,#d7c5ac 0 12%,#c7b59e 13% 25%,#eee8df 55%);
+  min-height:500px;
+  border-radius:8px;
+  overflow:hidden;
   position:relative;
+  background:#eee7dc;
 }
 
-.watch-display{
-  width:270px;
-  height:390px;
-  border-radius:150px;
-  background:linear-gradient(145deg,#252525,#080808);
-  box-shadow:0 30px 70px rgba(0,0,0,.3);
-  position:relative;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+.hero-watch img{
+  width:100%;
+  height:100%;
+  min-height:500px;
+  object-fit:cover;
+  display:block;
 }
 
-.watch-face{
-  width:205px;
-  height:205px;
-  border-radius:50%;
-  background:radial-gradient(circle,#eee9df,#c9bba8);
-  border:8px solid #c4a36f;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-family:"DM Serif Display",serif;
-  font-size:23px;
-  letter-spacing:2px;
-  box-shadow:inset 0 0 20px #777;
-}
-
-section{
-  padding:100px 6%;
+.section{
+  max-width:1200px;
+  margin:auto;
+  padding:90px 25px;
 }
 
 .section-head{
-  max-width:1250px;
-  margin:0 auto 45px;
   display:flex;
-  justify-content:space-between;
   align-items:end;
+  justify-content:space-between;
+  gap:20px;
+  margin-bottom:35px;
 }
 
 .section-head h2{
   font-family:"DM Serif Display",serif;
-  font-size:48px;
-  font-weight:400;
+  font-size:46px;
 }
 
 .section-head p{
-  color:var(--muted);
-  font-size:13px;
-  max-width:420px;
+  color:#777;
+  max-width:440px;
   line-height:1.7;
+  font-size:14px;
+}
+
+.filters{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-bottom:30px;
+}
+
+.filter{
+  padding:10px 18px;
+  border:1px solid var(--border);
+  background:white;
+  cursor:pointer;
+  border-radius:30px;
+  font-size:12px;
+  font-weight:600;
+}
+
+.filter.active,
+.filter:hover{
+  background:var(--dark);
+  color:white;
 }
 
 .products{
-  max-width:1250px;
-  margin:auto;
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:22px;
 }
 
-.product{
-  background:#fff;
-  border:1px solid #e7e0d6;
-  position:relative;
-  transition:.35s;
+.card{
+  background:white;
+  border:1px solid var(--border);
   overflow:hidden;
-}
-
-.product:hover{
-  transform:translateY(-7px);
-  box-shadow:0 20px 40px rgba(0,0,0,.08);
-}
-
-.product-img{
-  height:285px;
-  background:linear-gradient(145deg,#eee9e0,#d6c9b8);
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  transition:.3s;
   position:relative;
 }
 
-.watch-art{
-  width:90px;
-  height:190px;
-  border-radius:50px;
-  background:linear-gradient(90deg,#777,#ddd,#888);
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.card-img{
+  height:300px;
   position:relative;
-  box-shadow:0 18px 25px rgba(0,0,0,.2);
+  overflow:hidden;
+  background:#f0ece6;
+  cursor:pointer;
 }
 
-.watch-art:after{
-  content:"";
-  position:absolute;
-  width:72px;
-  height:72px;
-  border-radius:50%;
-  background:#eee;
-  border:5px solid #c09b61;
-  top:59px;
-  left:9px;
+.card-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.5s;
 }
 
-.watch-art.gold{background:linear-gradient(90deg,#7e5d2d,#e4c27f,#8b682f)}
-.watch-art.black{background:linear-gradient(90deg,#111,#444,#111)}
-.watch-art.rose{background:linear-gradient(90deg,#825e59,#e1aaa2,#8d625d)}
+.card:hover .card-img img{
+  transform:scale(1.05);
+}
 
 .heart{
   position:absolute;
-  right:14px;
   top:14px;
-  border:0;
-  background:#fff;
+  right:14px;
   width:38px;
   height:38px;
+  border:0;
+  background:white;
   border-radius:50%;
-  font-size:17px;
+  cursor:pointer;
+  font-size:18px;
+  z-index:2;
 }
 
-.product-info{padding:20px}
-.brand{
-  color:var(--gold);
-  font-size:9px;
-  letter-spacing:2px;
-  font-weight:700;
-  text-transform:uppercase;
+.heart.active{
+  color:#b08a45;
 }
-.product h3{
-  font-size:14px;
-  margin:8px 0 12px;
-  line-height:1.5;
+
+.card-body{
+  padding:20px;
 }
-.price{
-  font-weight:700;
-  font-size:17px;
+
+.card-body h3{
+  font-family:"DM Serif Display",serif;
+  font-size:23px;
 }
-.product small{
-  display:block;
-  color:#8a837a;
-  font-size:10px;
-  margin-top:7px;
-}
-.add{
-  margin-top:17px;
-  width:100%;
-  padding:12px;
-  border:1px solid var(--dark);
-  background:transparent;
-  font-size:10px;
-  font-weight:700;
+
+.category{
+  color:#91887d;
+  font-size:11px;
   letter-spacing:1px;
+  text-transform:uppercase;
+  margin:7px 0;
 }
-.add:hover{
+
+.price{
+  font-size:18px;
+  font-weight:700;
+  margin:14px 0;
+}
+
+.card-buttons{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+}
+
+.card-buttons button{
+  padding:11px 5px;
+  cursor:pointer;
+  border:1px solid var(--border);
+  background:white;
+  font-size:11px;
+  font-weight:700;
+}
+
+.card-buttons .add{
   background:var(--dark);
-  color:#fff;
+  color:white;
+  border-color:var(--dark);
+}
+
+.card-buttons button:hover{
+  background:var(--gold);
+  color:white;
+  border-color:var(--gold);
 }
 
 .features{
   background:var(--dark);
-  color:#fff;
+  color:white;
 }
 
 .feature-grid{
-  max-width:1150px;
+  max-width:1200px;
   margin:auto;
+  padding:70px 25px;
   display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:25px;
+  grid-template-columns:repeat(4,1fr);
+  gap:35px;
 }
 
 .feature{
-  border:1px solid #3c3834;
-  padding:35px;
   text-align:center;
 }
 
 .feature-icon{
-  font-size:30px;
-  margin-bottom:18px;
+  font-size:32px;
+  margin-bottom:15px;
 }
 
 .feature h3{
   font-family:"DM Serif Display",serif;
-  font-size:25px;
-  font-weight:400;
-  margin-bottom:10px;
+  font-size:22px;
+  margin-bottom:8px;
 }
 
 .feature p{
-  color:#aaa39a;
-  font-size:12px;
-  line-height:1.8;
+  color:#bbb4ab;
+  font-size:13px;
+  line-height:1.7;
 }
 
 .about{
-  max-width:1000px;
-  margin:auto;
-  text-align:center;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
 }
 
-.about h2{
+.about-img{
+  height:480px;
+  overflow:hidden;
+}
+
+.about-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.about-text h2{
   font-family:"DM Serif Display",serif;
-  font-size:50px;
-  font-weight:400;
+  font-size:48px;
+  margin-bottom:20px;
 }
 
-.about p{
-  margin:25px auto;
-  max-width:700px;
-  color:var(--muted);
-  line-height:2;
+.about-text p{
+  color:#70695f;
+  line-height:1.9;
   font-size:14px;
+  margin-bottom:15px;
 }
 
-.contact{
-  background:#e9e1d6;
-}
-
-.contact-box{
-  max-width:1100px;
-  margin:auto;
-  text-align:center;
-}
-
-.contact-box h2{
-  font-family:"DM Serif Display",serif;
-  font-size:55px;
-  font-weight:400;
-}
-
-.contact-box p{
-  color:var(--muted);
-  margin:18px auto 30px;
-}
-
-.email{
-  display:inline-block;
-  font-size:16px;
-  font-weight:700;
-  border-bottom:1px solid var(--gold);
-  padding-bottom:7px;
-  margin-bottom:30px;
-}
-
-.policy{
-  max-width:1000px;
-  margin:auto;
+.policies{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:20px;
 }
 
-.policy div{
-  background:#fff;
-  padding:25px;
-  border:1px solid #e4ddd4;
+.policy{
+  background:white;
+  border:1px solid var(--border);
+  padding:30px;
 }
 
-.policy strong{
-  display:block;
-  margin-bottom:8px;
+.policy h3{
+  font-family:"DM Serif Display",serif;
+  font-size:25px;
+  margin-bottom:12px;
+}
+
+.policy p{
+  color:#777;
+  line-height:1.8;
   font-size:13px;
 }
 
-.policy span{
-  color:var(--muted);
-  font-size:11px;
-  line-height:1.7;
+.contact{
+  background:#eee7dc;
+  text-align:center;
+}
+
+.contact h2{
+  font-family:"DM Serif Display",serif;
+  font-size:50px;
+  margin-bottom:15px;
+}
+
+.contact p{
+  color:#6f685f;
+  margin-bottom:25px;
+}
+
+.email-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background:var(--dark);
+  color:white;
+  padding:16px 28px;
+  border-radius:4px;
+  font-weight:700;
+}
+
+.email-btn:hover{
+  background:var(--gold);
 }
 
 footer{
-  background:#111;
-  color:#fff;
-  padding:50px 6%;
+  background:#11100f;
+  color:white;
+  padding:45px 25px;
 }
 
 .footer-inner{
@@ -451,417 +467,857 @@ footer{
 .footer-logo{
   font-family:"DM Serif Display",serif;
   font-size:30px;
-  letter-spacing:3px;
 }
 
-footer p{
-  color:#999;
-  font-size:11px;
-  margin-top:10px;
+.footer-inner p{
+  color:#aaa;
+  font-size:12px;
+  margin-top:8px;
 }
 
-.footer-links{
-  text-align:right;
-  font-size:11px;
-  line-height:2;
-  color:#bbb;
-}
-
-.cart{
+.modal{
+  display:none;
   position:fixed;
-  right:20px;
-  bottom:20px;
-  background:var(--dark);
-  color:#fff;
+  inset:0;
+  z-index:2000;
+  background:rgba(0,0,0,.72);
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+
+.modal.show{
+  display:flex;
+}
+
+.modal-box{
+  width:min(900px,100%);
+  max-height:90vh;
+  overflow:auto;
+  background:white;
+  position:relative;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+}
+
+.close{
+  position:absolute;
+  right:15px;
+  top:15px;
+  width:38px;
+  height:38px;
   border:0;
-  padding:15px 20px;
-  border-radius:30px;
-  box-shadow:0 10px 30px rgba(0,0,0,.25);
-  z-index:100;
+  border-radius:50%;
+  background:white;
+  cursor:pointer;
+  font-size:22px;
+  z-index:3;
+}
+
+.modal-image{
+  min-height:500px;
+}
+
+.modal-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.modal-content{
+  padding:50px 35px;
+}
+
+.modal-content .small{
+  color:var(--gold);
+  letter-spacing:2px;
   font-size:11px;
-  letter-spacing:1px;
+  font-weight:700;
+  text-transform:uppercase;
+}
+
+.modal-content h2{
+  font-family:"DM Serif Display",serif;
+  font-size:42px;
+  margin:12px 0;
+}
+
+.modal-price{
+  font-size:25px;
+  font-weight:700;
+  margin-bottom:25px;
+}
+
+.detail{
+  border-top:1px solid var(--border);
+  padding:14px 0;
+  display:flex;
+  justify-content:space-between;
+  font-size:13px;
+}
+
+.detail span:last-child{
+  font-weight:600;
+}
+
+.modal-actions{
+  display:grid;
+  gap:10px;
+  margin-top:25px;
+}
+
+.modal-actions button,
+.modal-actions a{
+  padding:14px;
+  text-align:center;
+  border:0;
+  cursor:pointer;
+  font-weight:700;
+}
+
+.modal-add{
+  background:var(--dark);
+  color:white;
+}
+
+.modal-order{
+  background:#eee7dc;
+  color:var(--dark);
+}
+
+.cart-panel{
+  position:fixed;
+  right:-430px;
+  top:0;
+  width:min(400px,100%);
+  height:100vh;
+  background:white;
+  z-index:3000;
+  box-shadow:-10px 0 40px rgba(0,0,0,.15);
+  transition:.35s;
+  padding:25px;
+  overflow:auto;
+}
+
+.cart-panel.open{
+  right:0;
+}
+
+.cart-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid var(--border);
+  padding-bottom:20px;
+}
+
+.cart-head h2{
+  font-family:"DM Serif Display",serif;
+  font-size:30px;
+}
+
+.cart-item{
+  display:grid;
+  grid-template-columns:70px 1fr auto;
+  gap:12px;
+  padding:18px 0;
+  border-bottom:1px solid var(--border);
+  align-items:center;
+}
+
+.cart-item img{
+  width:70px;
+  height:70px;
+  object-fit:cover;
+}
+
+.cart-item h4{
+  font-size:13px;
+}
+
+.cart-item p{
+  font-size:12px;
+  margin-top:5px;
+  color:#777;
+}
+
+.remove{
+  border:0;
+  background:none;
+  color:#a44;
+  cursor:pointer;
+  font-size:12px;
+}
+
+.cart-total{
+  padding:25px 0;
+  display:flex;
+  justify-content:space-between;
+  font-weight:700;
+  font-size:18px;
+}
+
+.checkout{
+  width:100%;
+  padding:15px;
+  background:var(--dark);
+  color:white;
+  border:0;
+  cursor:pointer;
+  font-weight:700;
+}
+
+.empty{
+  text-align:center;
+  color:#777;
+  padding:50px 10px;
+  font-size:14px;
 }
 
 .toast{
   position:fixed;
-  bottom:80px;
+  bottom:25px;
   left:50%;
-  transform:translateX(-50%) translateY(30px);
-  background:#171513;
+  transform:translate(-50%,100px);
+  background:var(--dark);
   color:white;
   padding:14px 22px;
-  border-radius:4px;
-  font-size:12px;
+  z-index:5000;
   opacity:0;
-  pointer-events:none;
   transition:.3s;
-  z-index:2000;
+  border-radius:4px;
+  font-size:13px;
 }
 
 .toast.show{
+  transform:translate(-50%,0);
   opacity:1;
-  transform:translateX(-50%) translateY(0);
+}
+
+.search-box{
+  display:none;
+  max-width:1200px;
+  margin:auto;
+  padding:12px 25px 20px;
+}
+
+.search-box.show{display:block}
+
+.search-box input{
+  width:100%;
+  padding:14px 18px;
+  border:1px solid var(--border);
+  outline:none;
+  background:white;
 }
 
 @media(max-width:900px){
-  nav{display:none}
-  .hero{grid-template-columns:1fr}
-  .hero-watch{min-height:450px}
+  .navlinks{display:none}
+  .menu{display:block}
+  .hero{
+    grid-template-columns:1fr;
+    padding-top:45px;
+  }
+  .hero h1{font-size:55px}
   .products{grid-template-columns:repeat(2,1fr)}
-  .feature-grid,.policy{grid-template-columns:1fr}
+  .feature-grid{grid-template-columns:repeat(2,1fr)}
+  .about{grid-template-columns:1fr}
+  .policies{grid-template-columns:1fr}
 }
 
-@media(max-width:550px){
-  .nav{height:70px;padding:0 15px}
+@media(max-width:600px){
+  .nav{height:68px}
   .logo{font-size:25px}
-  .hero-text{padding:65px 25px}
-  .hero-watch{min-height:420px}
-  .watch-display{transform:scale(.8)}
-  section{padding:70px 20px}
-  .section-head{display:block}
-  .section-head h2{font-size:39px;margin-bottom:15px}
+  .hero h1{font-size:48px}
+  .hero-watch,.hero-watch img{min-height:380px}
   .products{grid-template-columns:1fr}
-  .footer-inner{display:block}
-  .footer-links{text-align:left;margin-top:25px}
+  .feature-grid{grid-template-columns:1fr}
+  .section{padding:65px 18px}
+  .section-head{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  .modal-box{grid-template-columns:1fr}
+  .modal-image{min-height:330px}
+  .modal-content{padding:30px 22px}
+  .modal-content h2{font-size:35px}
+  .footer-inner{flex-direction:column}
 }
 </style>
 </head>
 
 <body>
 
-<div class="topbar">
-  PAKISTAN-WIDE DELIVERY · CASH ON DELIVERY AVAILABLE
-</div>
-
 <header>
   <div class="nav">
-    <a href="#home" class="logo">ÉL<span>O</span>RA</a>
+    <a href="#home" class="logo">É<span>LORA</span></a>
 
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#collection">Collection</a>
-      <a href="#about">About</a>
-      <a href="#policies">Policies</a>
-      <a href="#contact">Contact</a>
+    <nav class="navlinks">
+      <a href="#home">HOME</a>
+      <a href="#shop">SHOP</a>
+      <a href="#about">ABOUT</a>
+      <a href="#policies">POLICIES</a>
+      <a href="#contact">CONTACT</a>
     </nav>
 
     <div class="nav-actions">
-      <button class="icon-btn" onclick="showToast('Your wishlist is ready ❤️')">♡</button>
-      <button class="icon-btn" onclick="document.getElementById('collection').scrollIntoView()">⌕</button>
+      <button class="icon-btn" onclick="toggleSearch()">⌕</button>
+      <button class="icon-btn" onclick="openCart()">🛍</button>
+      <button class="icon-btn menu" onclick="mobileMenu()">☰</button>
     </div>
+  </div>
+
+  <div class="search-box" id="searchBox">
+    <input id="searchInput" oninput="searchProducts()" placeholder="Search watches...">
   </div>
 </header>
 
-<main>
-
 <section class="hero" id="home">
   <div class="hero-text">
-    <div class="eyebrow">Ladies Watch Collection</div>
-
-    <h1>Time looks<br><em>beautiful</em> on you.</h1>
-
+    <small>TIMELESS • FEMININE • ELEGANT</small>
+    <h1>Elegance<br>on your <span>wrist.</span></h1>
     <p>
-      Discover elegant ladies' watches selected for everyday style,
-      office looks and special occasions — available across Pakistan.
+      Discover beautiful ladies watches selected for everyday elegance,
+      special occasions and effortless style.
     </p>
 
-    <div>
-      <a href="#collection" class="btn">Explore Collection</a>
+    <div class="hero-buttons">
+      <a href="#shop" class="btn btn-dark">SHOP COLLECTION</a>
+      <a href="#contact" class="btn btn-light">CONTACT US</a>
     </div>
   </div>
 
   <div class="hero-watch">
-    <div class="watch-display">
-      <div class="watch-face">ÉLORA</div>
-    </div>
+    <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=900&q=85" alt="Elegant ladies watch">
   </div>
 </section>
 
-<section id="collection">
-
+<section class="section" id="shop">
   <div class="section-head">
     <div>
-      <div class="eyebrow">The Collection</div>
-      <h2>Timeless pieces.</h2>
+      <h2>Our Collection</h2>
+      <p>Elegant styles with affordable prices. Tap any watch to see its complete details.</p>
     </div>
-
-    <p>
-      A curated selection of ladies' watch models available in the
-      Pakistani market. Prices shown are reference prices and may change.
-    </p>
   </div>
 
-  <div class="products">
-
-    <div class="product">
-      <div class="product-img">
-        <button class="heart" onclick="showToast('Added to wishlist ❤️')">♡</button>
-        <div class="watch-art black"></div>
-      </div>
-      <div class="product-info">
-        <div class="brand">Casio</div>
-        <h3>LTP-1308D-1AVDF Ladies Watch</h3>
-        <div class="price">₨12,900</div>
-        <small>Black dial · Stainless steel bracelet</small>
-        <button class="add" onclick="addCart('LTP-1308D-1AVDF')">ADD TO CART</button>
-      </div>
-    </div>
-
-    <div class="product">
-      <div class="product-img">
-        <button class="heart" onclick="showToast('Added to wishlist ❤️')">♡</button>
-        <div class="watch-art gold"></div>
-      </div>
-      <div class="product-info">
-        <div class="brand">Casio</div>
-        <h3>LTP-1303SG-7AVDF Ladies Watch</h3>
-        <div class="price">₨15,900</div>
-        <small>Silver dial · Steel & gold bracelet</small>
-        <button class="add" onclick="addCart('LTP-1303SG-7AVDF')">ADD TO CART</button>
-      </div>
-    </div>
-
-    <div class="product">
-      <div class="product-img">
-        <button class="heart" onclick="showToast('Added to wishlist ❤️')">♡</button>
-        <div class="watch-art rose"></div>
-      </div>
-      <div class="product-info">
-        <div class="brand">Casio</div>
-        <h3>LTP-1308D-1A2VDF Ladies Watch</h3>
-        <div class="price">₨12,900</div>
-        <small>Black dial · Rose gold & steel bracelet</small>
-        <button class="add" onclick="addCart('LTP-1308D-1A2VDF')">ADD TO CART</button>
-      </div>
-    </div>
-
-    <div class="product">
-      <div class="product-img">
-        <button class="heart" onclick="showToast('Added to wishlist ❤️')">♡</button>
-        <div class="watch-art"></div>
-      </div>
-      <div class="product-info">
-        <div class="brand">Casio</div>
-        <h3>LTP-V005SG-7AUDF Ladies Watch</h3>
-        <div class="price">₨14,820</div>
-        <small>Silver & gold · Stainless steel</small>
-        <button class="add" onclick="addCart('LTP-V005SG-7AUDF')">ADD TO CART</button>
-      </div>
-    </div>
-
-    <div class="product">
-      <div class="product-img">
-        <button class="heart" onclick="showToast('Added to wishlist ❤️')">♡</button>
-        <div class="watch-art gold"></div>
-      </div>
-      <div class="product-info">
-        <div class="brand">Casio</div>
-        <h3>LTP-1165N-9CRDF Ladies Watch</h3>
-        <div class="price">₨16,499</div>
-        <small>Elegant full-gold bracelet style</small>
-        <button class="add" onclick="addCart('LTP-1165N-9CRDF')">ADD TO CART</button>
-      </div>
-    </div>
-
-    <div class="product">
-      <div class="product-img">
-        <button class="heart" onclick="showToast('Added to wishlist ❤️')">♡</button>
-        <div class="watch-art black"></div>
-      </div>
-      <div class="product-info">
-        <div class="brand">Casio</div>
-        <h3>LTP-V002L-1B3VDF Ladies Watch</h3>
-        <div class="price">₨9,800</div>
-        <small>Black leather band · Silver case</small>
-        <button class="add" onclick="addCart('LTP-V002L-1B3VDF')">ADD TO CART</button>
-      </div>
-    </div>
-
-    <div class="product">
-      <div class="product-img">
-        <button class="heart" onclick="showToast('Added to wishlist ❤️')">♡</button>
-        <div class="watch-art rose"></div>
-      </div>
-      <div class="product-info">
-        <div class="brand">Casio</div>
-        <h3>LTP-1165A-4C Ladies Watch</h3>
-        <div class="price">₨14,500</div>
-        <small>Silver & pink · Classic ladies design</small>
-        <button class="add" onclick="addCart('LTP-1165A-4C')">ADD TO CART</button>
-      </div>
-    </div>
-
-    <div class="product">
-      <div class="product-img">
-        <button class="heart" onclick="showToast('Added to wishlist ❤️')">♡</button>
-        <div class="watch-art"></div>
-      </div>
-      <div class="product-info">
-        <div class="brand">Casio</div>
-        <h3>LTP-1302SG-7AVDF Ladies Watch</h3>
-        <div class="price">₨17,200</div>
-        <small>Steel & gold · Elegant bracelet</small>
-        <button class="add" onclick="addCart('LTP-1302SG-7AVDF')">ADD TO CART</button>
-      </div>
-    </div>
-
+  <div class="filters">
+    <button class="filter active" onclick="filterProducts('all',this)">ALL</button>
+    <button class="filter" onclick="filterProducts('classic',this)">CLASSIC</button>
+    <button class="filter" onclick="filterProducts('chain',this)">CHAIN</button>
+    <button class="filter" onclick="filterProducts('leather',this)">LEATHER</button>
+    <button class="filter" onclick="filterProducts('party',this)">PARTY</button>
   </div>
+
+  <div class="products" id="products"></div>
 </section>
 
 <section class="features">
-  <div class="section-head">
-    <div>
-      <div class="eyebrow">Why ÉLORA</div>
-      <h2>Made for your moments.</h2>
-    </div>
-  </div>
-
   <div class="feature-grid">
-
     <div class="feature">
-      <div class="feature-icon">✦</div>
-      <h3>Elegant Selection</h3>
-      <p>
-        Carefully selected ladies' watch styles for everyday,
-        professional and special-occasion looks.
-      </p>
+      <div class="feature-icon">✨</div>
+      <h3>Elegant Styles</h3>
+      <p>Beautiful designs selected for a feminine and polished look.</p>
     </div>
 
     <div class="feature">
-      <div class="feature-icon">♡</div>
-      <h3>Pakistan-Wide</h3>
-      <p>
-        Orders are available for delivery across Pakistan.
-      </p>
+      <div class="feature-icon">💰</div>
+      <h3>Affordable Prices</h3>
+      <p>Stylish watches at prices designed to stay budget friendly.</p>
     </div>
 
     <div class="feature">
-      <div class="feature-icon">✓</div>
-      <h3>Easy Ordering</h3>
-      <p>
-        Contact ÉLORA by email to confirm your watch,
-        quantity and delivery details.
-      </p>
+      <div class="feature-icon">🚚</div>
+      <h3>Pakistan Delivery</h3>
+      <p>Delivery available across Pakistan.</p>
     </div>
 
+    <div class="feature">
+      <div class="feature-icon">↩</div>
+      <h3>10-Day Exchange</h3>
+      <p>Exchange or return within 10 days according to our policy.</p>
+    </div>
   </div>
 </section>
 
-<section id="about">
+<section class="section" id="about">
   <div class="about">
-    <div class="eyebrow">About ÉLORA</div>
-    <h2>Elegance, one moment at a time.</h2>
+    <div class="about-img">
+      <img src="https://images.unsplash.com/photo-1533139502658-0198f920d8e8?auto=format&fit=crop&w=900&q=85" alt="Elegant watch">
+    </div>
 
-    <p>
-      ÉLORA is a ladies' watch collection created around timeless,
-      feminine and versatile designs. Our collection focuses on
-      watches that can complement everyday outfits, workwear and
-      special moments.
-    </p>
-
-    <a href="#contact" class="btn">Contact ÉLORA</a>
+    <div class="about-text">
+      <h2>Made for her.</h2>
+      <p>
+        ÉLORA is a ladies-watch collection focused on elegant,
+        wearable and affordable designs.
+      </p>
+      <p>
+        Whether you're looking for an everyday watch, a beautiful
+        bracelet style or something for a special occasion,
+        ÉLORA keeps the choice simple and stylish.
+      </p>
+    </div>
   </div>
 </section>
 
-<section id="policies">
+<section class="section" id="policies">
   <div class="section-head">
     <div>
-      <div class="eyebrow">Shopping Information</div>
-      <h2>Simple & clear.</h2>
+      <h2>Shopping Information</h2>
     </div>
   </div>
 
-  <div class="policy">
-
-    <div>
-      <strong>🚚 Delivery</strong>
-      <span>Pakistan-wide delivery is available.</span>
+  <div class="policies">
+    <div class="policy">
+      <h3>Delivery</h3>
+      <p>We offer delivery across Pakistan.</p>
     </div>
 
-    <div>
-      <strong>💳 Payment</strong>
-      <span>Cash on Delivery and bank transfer are available.</span>
+    <div class="policy">
+      <h3>Payment</h3>
+      <p>Cash on Delivery and bank transfer are available.</p>
     </div>
 
-    <div>
-      <strong>↩ Return & Exchange</strong>
-      <span>Return/exchange requests can be made within 10 days.</span>
+    <div class="policy">
+      <h3>Return & Exchange</h3>
+      <p>Return or exchange requests can be made within 10 days.</p>
     </div>
-
   </div>
 </section>
 
-<section class="contact" id="contact">
-  <div class="contact-box">
+<section class="section contact" id="contact">
+  <h2>Let's talk.</h2>
+  <p>Want to order a watch or ask something? Email ÉLORA directly.</p>
 
-    <div class="eyebrow">Get In Touch</div>
-
-    <h2>Ready to find your watch?</h2>
-
-    <p>
-      For orders and enquiries, contact ÉLORA by email.
-    </p>
-
-    <a class="email"
-       href="mailto:yusraashraf945@gmail.com?subject=ÉLORA Watch Order">
-       yusraashraf945@gmail.com
-    </a>
-
-    <br>
-
-    <a class="btn"
-       href="mailto:yusraashraf945@gmail.com?subject=ÉLORA Watch Order">
-       Order / Contact ÉLORA
-    </a>
-
-  </div>
+  <a
+    class="email-btn"
+    href="mailto:yusraashraf945@gmail.com?subject=ÉLORA%20Watch%20Inquiry">
+    ✉ Email ÉLORA
+  </a>
 </section>
-
-</main>
 
 <footer>
   <div class="footer-inner">
-
     <div>
       <div class="footer-logo">ÉLORA</div>
-      <p>Ladies Watches · Pakistan</p>
-      <p>© 2026 ÉLORA. All rights reserved.</p>
+      <p>Elegant watches for every moment.</p>
     </div>
 
-    <div class="footer-links">
-      Pakistan-wide Delivery<br>
-      Cash on Delivery · Bank Transfer<br>
-      10-Day Return & Exchange<br>
-      yusraashraf945@gmail.com
+    <div>
+      <p>Pakistan-wide delivery</p>
+      <p>Cash on Delivery • Bank Transfer</p>
+      <p>© 2026 ÉLORA</p>
     </div>
-
   </div>
 </footer>
 
-<button class="cart" onclick="showToast('Your cart is ready 🛍️')">
-  🛍️ CART <span id="cartCount">0</span>
-</button>
+<!-- PRODUCT DETAIL MODAL -->
+<div class="modal" id="productModal">
+  <div class="modal-box">
+    <button class="close" onclick="closeModal()">×</button>
+
+    <div class="modal-image">
+      <img id="modalImage" src="" alt="">
+    </div>
+
+    <div class="modal-content">
+      <div class="small" id="modalCategory"></div>
+      <h2 id="modalName"></h2>
+      <div class="modal-price" id="modalPrice"></div>
+
+      <div class="detail">
+        <span>Style</span>
+        <span id="modalStyle"></span>
+      </div>
+
+      <div class="detail">
+        <span>Strap</span>
+        <span id="modalStrap"></span>
+      </div>
+
+      <div class="detail">
+        <span>Dial</span>
+        <span id="modalDial"></span>
+      </div>
+
+      <div class="detail">
+        <span>Movement</span>
+        <span>Quartz</span>
+      </div>
+
+      <div class="detail">
+        <span>Suitable for</span>
+        <span id="modalUse"></span>
+      </div>
+
+      <div class="modal-actions">
+        <button class="modal-add" id="modalAdd">ADD TO CART</button>
+        <a class="modal-order" id="modalOrder">ORDER VIA EMAIL</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CART -->
+<div class="cart-panel" id="cartPanel">
+  <div class="cart-head">
+    <h2>Your Cart</h2>
+    <button class="icon-btn" onclick="closeCart()">×</button>
+  </div>
+
+  <div id="cartItems"></div>
+
+  <div class="cart-total">
+    <span>Total</span>
+    <span id="cartTotal">₨0</span>
+  </div>
+
+  <button class="checkout" onclick="emailCart()">ORDER VIA EMAIL</button>
+</div>
 
 <div class="toast" id="toast"></div>
 
 <script>
-let cartCount = 0;
+const products = [
+  {
+    id:1,
+    name:"ÉLORA Classic Gold",
+    category:"classic",
+    categoryText:"Classic Collection",
+    price:1490,
+    style:"Classic Round",
+    strap:"Gold-tone bracelet",
+    dial:"Elegant light dial",
+    use:"Everyday wear",
+    image:"https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&w=700&q=85"
+  },
+  {
+    id:2,
+    name:"ÉLORA Rose Charm",
+    category:"chain",
+    categoryText:"Chain Collection",
+    price:1690,
+    style:"Jewellery Style",
+    strap:"Rose-gold chain",
+    dial:"Minimal round dial",
+    use:"Daily & gifting",
+    image:"https://images.unsplash.com/photo-1508057198894-247b23fe5ade?auto=format&fit=crop&w=700&q=85"
+  },
+  {
+    id:3,
+    name:"ÉLORA Silver Grace",
+    category:"classic",
+    categoryText:"Classic Collection",
+    price:1790,
+    style:"Classic Round",
+    strap:"Silver-tone bracelet",
+    dial:"White dial",
+    use:"Everyday & office",
+    image:"https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=700&q=85"
+  },
+  {
+    id:4,
+    name:"ÉLORA Black Muse",
+    category:"leather",
+    categoryText:"Leather Collection",
+    price:1890,
+    style:"Minimal",
+    strap:"Black leather-style strap",
+    dial:"Black dial",
+    use:"Casual & formal",
+    image:"https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=700&q=85"
+  },
+  {
+    id:5,
+    name:"ÉLORA Golden Pearl",
+    category:"party",
+    categoryText:"Party Collection",
+    price:2290,
+    style:"Jewellery Watch",
+    strap:"Gold-tone bracelet",
+    dial:"Pearl-inspired dial",
+    use:"Events & parties",
+    image:"https://images.unsplash.com/photo-1526045431048-f857369baa09?auto=format&fit=crop&w=700&q=85"
+  },
+  {
+    id:6,
+    name:"ÉLORA Rose Classic",
+    category:"classic",
+    categoryText:"Classic Collection",
+    price:1990,
+    style:"Elegant Round",
+    strap:"Rose-gold bracelet",
+    dial:"Light minimal dial",
+    use:"Everyday wear",
+    image:"https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=700&q=85"
+  },
+  {
+    id:7,
+    name:"ÉLORA Evening",
+    category:"party",
+    categoryText:"Party Collection",
+    price:2490,
+    style:"Elegant Party",
+    strap:"Metal bracelet",
+    dial:"Statement dial",
+    use:"Special occasions",
+    image:"https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?auto=format&fit=crop&w=700&q=85"
+  },
+  {
+    id:8,
+    name:"ÉLORA Soft Pink",
+    category:"chain",
+    categoryText:"Chain Collection",
+    price:2190,
+    style:"Feminine Chain",
+    strap:"Pink-tone bracelet",
+    dial:"Soft pink dial",
+    use:"Daily & gifting",
+    image:"https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=700&q=85"
+  }
+];
 
-function addCart(product){
-  cartCount++;
-  document.getElementById("cartCount").textContent = cartCount;
-  showToast(product + " added to cart");
+let cart = JSON.parse(localStorage.getItem("eloraCart")) || [];
+let wishlist = JSON.parse(localStorage.getItem("eloraWishlist")) || [];
+
+function money(value){
+  return "₨" + value.toLocaleString("en-PK");
 }
 
-function showToast(message){
+function renderProducts(list = products){
+  const box = document.getElementById("products");
+
+  if(!list.length){
+    box.innerHTML = "<p>No watches found.</p>";
+    return;
+  }
+
+  box.innerHTML = list.map(p => `
+    <div class="card">
+      <div class="card-img" onclick="showDetails(${p.id})">
+        <img src="${p.image}" alt="${p.name}">
+        <button
+          class="heart ${wishlist.includes(p.id) ? "active" : ""}"
+          onclick="event.stopPropagation(); toggleWishlist(${p.id},this)">
+          ${wishlist.includes(p.id) ? "♥" : "♡"}
+        </button>
+      </div>
+
+      <div class="card-body">
+        <h3>${p.name}</h3>
+        <div class="category">${p.categoryText}</div>
+        <div class="price">${money(p.price)}</div>
+
+        <div class="card-buttons">
+          <button onclick="showDetails(${p.id})">VIEW DETAILS</button>
+          <button class="add" onclick="addToCart(${p.id})">ADD TO CART</button>
+        </div>
+      </div>
+    </div>
+  `).join("");
+}
+
+function showDetails(id){
+  const p = products.find(x => x.id === id);
+
+  document.getElementById("modalImage").src = p.image;
+  document.getElementById("modalName").textContent = p.name;
+  document.getElementById("modalCategory").textContent = p.categoryText;
+  document.getElementById("modalPrice").textContent = money(p.price);
+  document.getElementById("modalStyle").textContent = p.style;
+  document.getElementById("modalStrap").textContent = p.strap;
+  document.getElementById("modalDial").textContent = p.dial;
+  document.getElementById("modalUse").textContent = p.use;
+
+  document.getElementById("modalAdd").onclick = () => {
+    addToCart(p.id);
+    closeModal();
+  };
+
+  const subject = encodeURIComponent("ÉLORA Watch Order - " + p.name);
+  const body = encodeURIComponent(
+    "Hello ÉLORA,\n\nI would like to order:\n" +
+    p.name + "\nPrice: " + money(p.price) +
+    "\n\nPlease share the next steps for my order."
+  );
+
+  document.getElementById("modalOrder").href =
+    `mailto:yusraashraf945@gmail.com?subject=${subject}&body=${body}`;
+
+  document.getElementById("productModal").classList.add("show");
+}
+
+function closeModal(){
+  document.getElementById("productModal").classList.remove("show");
+}
+
+function addToCart(id){
+  const existing = cart.find(x => x.id === id);
+
+  if(existing){
+    existing.qty++;
+  }else{
+    cart.push({id,qty:1});
+  }
+
+  saveCart();
+  showToast("Watch added to your cart.");
+}
+
+function saveCart(){
+  localStorage.setItem("eloraCart",JSON.stringify(cart));
+  renderCart();
+}
+
+function renderCart(){
+  const box = document.getElementById("cartItems");
+
+  if(!cart.length){
+    box.innerHTML = `<div class="empty">Your cart is empty.</div>`;
+    document.getElementById("cartTotal").textContent = "₨0";
+    return;
+  }
+
+  let total = 0;
+
+  box.innerHTML = cart.map(item => {
+    const p = products.find(x => x.id === item.id);
+    total += p.price * item.qty;
+
+    return `
+      <div class="cart-item">
+        <img src="${p.image}" alt="${p.name}">
+        <div>
+          <h4>${p.name}</h4>
+          <p>${money(p.price)} × ${item.qty}</p>
+        </div>
+        <button class="remove" onclick="removeCart(${p.id})">Remove</button>
+      </div>
+    `;
+  }).join("");
+
+  document.getElementById("cartTotal").textContent = money(total);
+}
+
+function removeCart(id){
+  cart = cart.filter(x => x.id !== id);
+  saveCart();
+}
+
+function openCart(){
+  renderCart();
+  document.getElementById("cartPanel").classList.add("open");
+}
+
+function closeCart(){
+  document.getElementById("cartPanel").classList.remove("open");
+}
+
+function emailCart(){
+  if(!cart.length){
+    showToast("Your cart is empty.");
+    return;
+  }
+
+  let total = 0;
+  let message = "Hello ÉLORA,%0D%0A%0D%0AI would like to order:%0D%0A%0D%0A";
+
+  cart.forEach(item => {
+    const p = products.find(x => x.id === item.id);
+    total += p.price * item.qty;
+
+    message +=
+      `${encodeURIComponent(p.name)} - ${encodeURIComponent(money(p.price))} x ${item.qty}%0D%0A`;
+  });
+
+  message += `%0D%0ATotal: ${encodeURIComponent(money(total))}`;
+  message += `%0D%0A%0D%0APlease share the next steps for my order.`;
+
+  window.location.href =
+    `mailto:yusraashraf945@gmail.com?subject=ÉLORA%20Watch%20Order&body=${message}`;
+}
+
+function toggleWishlist(id,button){
+  if(wishlist.includes(id)){
+    wishlist = wishlist.filter(x => x !== id);
+    button.classList.remove("active");
+    button.textContent = "♡";
+    showToast("Removed from wishlist.");
+  }else{
+    wishlist.push(id);
+    button.classList.add("active");
+    button.textContent = "♥";
+    showToast("Added to wishlist.");
+  }
+
+  localStorage.setItem("eloraWishlist",JSON.stringify(wishlist));
+}
+
+function filterProducts(category,button){
+  document.querySelectorAll(".filter").forEach(x => x.classList.remove("active"));
+  button.classList.add("active");
+
+  if(category === "all"){
+    renderProducts(products);
+  }else{
+    renderProducts(products.filter(p => p.category === category));
+  }
+}
+
+function toggleSearch(){
+  document.getElementById("searchBox").classList.toggle("show");
+
+  if(document.getElementById("searchBox").classList.contains("show")){
+    document.getElementById("searchInput").focus();
+  }
+}
+
+function searchProducts(){
+  const q = document.getElementById("searchInput").value.toLowerCase();
+
+  renderProducts(
+    products.filter(p =>
+      p.name.toLowerCase().includes(q) ||
+      p.categoryText.toLowerCase().includes(q) ||
+      p.style.toLowerCase().includes(q)
+    )
+  );
+}
+
+function mobileMenu(){
+  const nav = document.querySelector(".navlinks");
+
+  if(nav.style.display === "flex"){
+    nav.style.display = "";
+  }else{
+    nav.style.display = "flex";
+    nav.style.position = "absolute";
+    nav.style.top = "68px";
+    nav.style.left = "0";
+    nav.style.right = "0";
+    nav.style.background = "#faf7f2";
+    nav.style.padding = "25px";
+    nav.style.flexDirection = "column";
+    nav.style.borderBottom = "1px solid #e8dfd2";
+  }
+}
+
+function showToast(text){
   const toast = document.getElementById("toast");
-  toast.textContent = message;
+  toast.textContent = text;
   toast.classList.add("show");
 
-  setTimeout(()=>{
+  setTimeout(() => {
     toast.classList.remove("show");
   },2200);
 }
+
+document.getElementById("productModal").addEventListener("click",function(e){
+  if(e.target === this) closeModal();
+});
+
+renderProducts();
+renderCart();
 </script>
 
 </body>
